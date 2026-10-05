@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.util.Log;
+import android.content.Intent;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,5 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i("Ejemplo", "Estoy en onDestroy");
+        Intent ejemplo = new Intent(this, MainActivity2.class);
+        startActivity(ejemplo);
     }
 }
